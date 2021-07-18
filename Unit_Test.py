@@ -64,7 +64,6 @@ def total_amt_30_days(df):
         .groupby(['cc_num'])['amount'] \
         .rolling('30D') \
         .sum() \
-        .shift(1) \
         .reset_index() \
         .fillna(0)
     df1.columns = ['cc_num', 'trans_date', 'total_amt_30d']
@@ -111,7 +110,6 @@ def count_merchant_trans_30D(df):
         .groupby(['cc_num', 'merchant'])['counter'] \
         .rolling('30D') \
         .count() \
-        .shift() \
         .reset_index() \
         .fillna(0)
     df3.columns=['cc_num','merchant','trans_date_trans_time','merchant_count']
