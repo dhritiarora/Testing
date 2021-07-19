@@ -12,8 +12,8 @@ name: Automated Tests
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  paths:
+  - 'Automated_Tests/**'
 
 jobs:
   build:
