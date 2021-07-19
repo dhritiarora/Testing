@@ -11,7 +11,7 @@ name: Automated Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ Fraud ]
     paths:
     - 'Automated_Tests/**'
 
