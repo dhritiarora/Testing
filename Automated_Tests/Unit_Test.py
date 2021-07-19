@@ -3,7 +3,7 @@ import pytest
 ##test files added !!!!!!
 
 def load_data():
-    df=pd.read_csv("dataset.csv")
+    df=pd.read_csv("Automated_Tests/dataset.csv")
     df['Time'] = pd.to_datetime(df['time'])
     df.index = pd.to_datetime(df['time'])
     df = df.rename_axis(index={'time': 'time_index'})
